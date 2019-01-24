@@ -1,0 +1,408 @@
+{
+  "id": "KSProblem71336-I100-WM100",
+  "problem": {
+    "items": [
+      {
+        "item": "item0",
+        "value": 92
+      },
+      {
+        "item": "item1",
+        "value": 26
+      },
+      {
+        "item": "item2",
+        "value": 84
+      },
+      {
+        "item": "item3",
+        "value": 79
+      },
+      {
+        "item": "item4",
+        "value": 42
+      },
+      {
+        "item": "item5",
+        "value": 47
+      },
+      {
+        "item": "item6",
+        "value": 34
+      },
+      {
+        "item": "item7",
+        "value": 51
+      },
+      {
+        "item": "item8",
+        "value": 63
+      },
+      {
+        "item": "item9",
+        "value": 25
+      },
+      {
+        "item": "item10",
+        "value": 56
+      },
+      {
+        "item": "item11",
+        "value": 23
+      },
+      {
+        "item": "item12",
+        "value": 23
+      },
+      {
+        "item": "item13",
+        "value": 10
+      },
+      {
+        "item": "item14",
+        "value": 85
+      },
+      {
+        "item": "item15",
+        "value": 77
+      },
+      {
+        "item": "item16",
+        "value": 34
+      },
+      {
+        "item": "item17",
+        "value": 82
+      },
+      {
+        "item": "item18",
+        "value": 51
+      },
+      {
+        "item": "item19",
+        "value": 83
+      },
+      {
+        "item": "item20",
+        "value": 44
+      },
+      {
+        "item": "item21",
+        "value": 77
+      },
+      {
+        "item": "item22",
+        "value": 97
+      },
+      {
+        "item": "item23",
+        "value": 57
+      },
+      {
+        "item": "item24",
+        "value": 82
+      },
+      {
+        "item": "item25",
+        "value": 74
+      },
+      {
+        "item": "item26",
+        "value": 80
+      },
+      {
+        "item": "item27",
+        "value": 4
+      },
+      {
+        "item": "item28",
+        "value": 97
+      },
+      {
+        "item": "item29",
+        "value": 89
+      },
+      {
+        "item": "item30",
+        "value": 1
+      },
+      {
+        "item": "item31",
+        "value": 78
+      },
+      {
+        "item": "item32",
+        "value": 12
+      },
+      {
+        "item": "item33",
+        "value": 66
+      },
+      {
+        "item": "item34",
+        "value": 88
+      },
+      {
+        "item": "item35",
+        "value": 98
+      },
+      {
+        "item": "item36",
+        "value": 62
+      },
+      {
+        "item": "item37",
+        "value": 19
+      },
+      {
+        "item": "item38",
+        "value": 53
+      },
+      {
+        "item": "item39",
+        "value": 66
+      },
+      {
+        "item": "item40",
+        "value": 41
+      },
+      {
+        "item": "item41",
+        "value": 27
+      },
+      {
+        "item": "item42",
+        "value": 79
+      },
+      {
+        "item": "item43",
+        "value": 14
+      },
+      {
+        "item": "item44",
+        "value": 85
+      },
+      {
+        "item": "item45",
+        "value": 42
+      },
+      {
+        "item": "item46",
+        "value": 31
+      },
+      {
+        "item": "item47",
+        "value": 80
+      },
+      {
+        "item": "item48",
+        "value": 42
+      },
+      {
+        "item": "item49",
+        "value": 53
+      },
+      {
+        "item": "item50",
+        "value": 17
+      },
+      {
+        "item": "item51",
+        "value": 70
+      },
+      {
+        "item": "item52",
+        "value": 13
+      },
+      {
+        "item": "item53",
+        "value": 29
+      },
+      {
+        "item": "item54",
+        "value": 100
+      },
+      {
+        "item": "item55",
+        "value": 80
+      },
+      {
+        "item": "item56",
+        "value": 85
+      },
+      {
+        "item": "item57",
+        "value": 72
+      },
+      {
+        "item": "item58",
+        "value": 97
+      },
+      {
+        "item": "item59",
+        "value": 26
+      },
+      {
+        "item": "item60",
+        "value": 37
+      },
+      {
+        "item": "item61",
+        "value": 31
+      },
+      {
+        "item": "item62",
+        "value": 87
+      },
+      {
+        "item": "item63",
+        "value": 66
+      },
+      {
+        "item": "item64",
+        "value": 46
+      },
+      {
+        "item": "item65",
+        "value": 99
+      },
+      {
+        "item": "item66",
+        "value": 76
+      },
+      {
+        "item": "item67",
+        "value": 62
+      },
+      {
+        "item": "item68",
+        "value": 62
+      },
+      {
+        "item": "item69",
+        "value": 47
+      },
+      {
+        "item": "item70",
+        "value": 63
+      },
+      {
+        "item": "item71",
+        "value": 19
+      },
+      {
+        "item": "item72",
+        "value": 72
+      },
+      {
+        "item": "item73",
+        "value": 36
+      },
+      {
+        "item": "item74",
+        "value": 17
+      },
+      {
+        "item": "item75",
+        "value": 22
+      },
+      {
+        "item": "item76",
+        "value": 35
+      },
+      {
+        "item": "item77",
+        "value": 64
+      },
+      {
+        "item": "item78",
+        "value": 44
+      },
+      {
+        "item": "item79",
+        "value": 49
+      },
+      {
+        "item": "item80",
+        "value": 34
+      },
+      {
+        "item": "item81",
+        "value": 68
+      },
+      {
+        "item": "item82",
+        "value": 88
+      },
+      {
+        "item": "item83",
+        "value": 38
+      },
+      {
+        "item": "item84",
+        "value": 24
+      },
+      {
+        "item": "item85",
+        "value": 16
+      },
+      {
+        "item": "item86",
+        "value": 30
+      },
+      {
+        "item": "item87",
+        "value": 82
+      },
+      {
+        "item": "item88",
+        "value": 21
+      },
+      {
+        "item": "item89",
+        "value": 44
+      },
+      {
+        "item": "item90",
+        "value": 28
+      },
+      {
+        "item": "item91",
+        "value": 25
+      },
+      {
+        "item": "item92",
+        "value": 44
+      },
+      {
+        "item": "item93",
+        "value": 68
+      },
+      {
+        "item": "item94",
+        "value": 13
+      },
+      {
+        "item": "item95",
+        "value": 31
+      },
+      {
+        "item": "item96",
+        "value": 41
+      },
+      {
+        "item": "item97",
+        "value": 6
+      },
+      {
+        "item": "item98",
+        "value": 9
+      },
+      {
+        "item": "item99",
+        "value": 98
+      }
+    ],
+    "size": 2618
+  }
+}

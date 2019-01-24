@@ -1,0 +1,39 @@
+{
+	"problem": "knapsack",
+	"parameters": [
+		{
+			"id": "itemNumber",
+			"value": 100000
+		},
+		{
+			"id": "maxWeight",
+			"value": 100000
+		}
+	],
+	"config": {
+		"maxMemory": -1,
+		"maxTime": -1
+	},
+	"info": {
+		"maxProcessMemory": 10000,
+		"initialMemory": 10000
+	},
+	"result": {
+		"stages": [
+			{
+				"id": "problemGeneration",
+				"duration": 162.19,
+				"memory": 27.03
+			},
+			{
+				"id": "problemSolving",
+				"duration": 162.19,
+				"memory": 27.03
+			}
+		],
+		"total": {
+			"duration": 108.426,
+			"memory": 47.09
+		}
+	}
+}
