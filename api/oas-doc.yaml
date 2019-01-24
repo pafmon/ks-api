@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: 1.0.0
-  title: Problem list
+  title: Knapsack Stress API
   description: >-
     This is a Knapsack API for stress analysis and benchmarking
     (Bootstraped with https://github.com/pafmon/oas-wizard and https://github.com/isa-group/oas-generator)  
