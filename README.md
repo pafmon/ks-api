@@ -42,13 +42,7 @@ In order to send a request, you can use a POST request:
 }
 ```
 
-or a GET request:
-
-`GET /api/v1/stress/10000/10`
-This request will generate and solve a knapsack problem with 10000 items (each of them with a random weight up to 10) 
-
-
-
+or a GET request. For example a `GET /api/v1/stress/10000/10` would generate and solve a knapsack problem with 10000 items (each of them with a random weight up to 10).
 
 #### Knapsack problem
 
