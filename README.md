@@ -19,9 +19,9 @@ Then, if running in localhost, you can check the swagger UI doc portal in: `http
 
 #### Stress request
 
-In order to send a request, you can use a POST request:
+In order to send a request, either GET or POST can be used:
 
-`POST /api/v1/stress`
+- `POST /api/v1/stress` 
 ```json
 {
 	"problem": "knapsack",
@@ -42,7 +42,7 @@ In order to send a request, you can use a POST request:
 }
 ```
 
-or a GET request. For example a `GET /api/v1/stress/10000/10` would generate and solve a knapsack problem with 10000 items (each of them with a random weight up to 10).
+- `GET /api/v1/stress/10000/10` would generate and solve a knapsack problem with 10000 items (each of them with a random weight up to 10).
 
 #### Knapsack problem
 
