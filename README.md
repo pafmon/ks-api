@@ -23,6 +23,8 @@ npm start
 
 Then, if running in localhost, you can check the swagger UI doc portal in: `http://localhost:8080/`
 
+### Using the API
+
 #### Stress request
 
 In order to send a request, either GET or POST can be used:
