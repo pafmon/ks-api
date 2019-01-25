@@ -124,9 +124,8 @@ module.exports.newProblem = function newProblem(req, res, next) {
   var solutionSolvingTime=(end-begin)/1000+"ms";
   console.log("solvingTime: "+solutionSolvingTime); 
   
-  //var solutionItems = itemsUnMarshall(ksSolutionItems);
-  var solutionItems = [];
-  problemRequest.problem.items = [];
+  var solutionItems = itemsUnMarshall(ksSolutionItems);
+  problemRequest.problem.items = problemRequest.problem.items;
   
   console.log("Solution item size: "+solutionItems.length);
 
