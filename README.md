@@ -3,9 +3,15 @@
 ## Overview
 This is a Knapsack API for stress analysis and benchmarking. 
 
-This server was scaffolded with [oas-wizard](https://github.com/pafmon/oas-wizard), [oas-tools](https://github.com/isa-group/oas-tools) and [oas-generator](https://github.com/isa-group/oas-generator)
+This server was scaffolded with [oas-wizard](https://github.com/pafmon/oas-wizard), [oas-tools](https://github.com/isa-group/oas-tools) and [oas-generator](https://github.com/isa-group/oas-generator); and based on a Knapsack implementation is taken from: [devfacet](http://github.com/devfacet/knapsack)
 
-The Knapsack implementation is taken from: http://github.com/devfacet/knapsack
+There is a on-line demo deployment version at: https://knapsack-api.herokuapp.com
+
+
+### Docker run
+
+If you have docker, you can use it out of the box: `docker run -p 12345:80 -d pafmon/ks-api` to run the container at port `12345`
+
 
 ### Running the server
 
@@ -15,8 +21,7 @@ To run the server, just use:
 npm start
 ```
 
-Then, if running in localhost, you can check the swagger UI doc portal in: `http://localhost:8080/docs`
-
+Then, if running in localhost, you can check the swagger UI doc portal in: `http://localhost:8080/`
 
 #### Stress request
 
@@ -142,4 +147,3 @@ will get:
   }
 }
 ```
-
