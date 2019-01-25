@@ -14,14 +14,14 @@ To run the server, run:
 npm start
 ```
 
-Then, if running in localhost, you can check the swagger UI doc portal in:  http://localhost:8080/docs
+Then, if running in localhost, you can check the swagger UI doc portal in: `http://localhost:8080/docs`
 
 
 #### Stress request
 
 In order to send a request, you can use a POST request:
 
-`POST /api//v1/stress`
+`POST /api/v1/stress`
 ```json
 {
 	"problem": "knapsack",
@@ -44,7 +44,7 @@ In order to send a request, you can use a POST request:
 
 or a GET request:
 
-`GET /api//v1/stress/10000/10`
+`GET /api/v1/stress/10000/10`
 This request will generate and solve a knapsack problem with 10000 items (each of them with a random weight up to 10) 
 
 
