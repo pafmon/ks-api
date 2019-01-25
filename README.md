@@ -3,7 +3,7 @@
 ## Overview
 This is a Knapsack API for stress analysis and benchmarking. 
 
-This server was scaffolded with [oas-wizard](https://github.com/pafmon/oas-wizard), [oas-tools](https://github.com/isa-group/oas-tools) and [oas-generator](https://github.com/isa-group/oas-generator); Knapsack algorithm is taken from [devfacet](http://github.com/devfacet/knapsack).
+This server was scaffolded with [oas-wizard](https://github.com/pafmon/oas-wizard), [oas-tools](https://github.com/isa-group/oas-tools) and [oas-generator](https://github.com/isa-group/oas-generator); knapsack algorithm is taken from [devfacet](http://github.com/devfacet/knapsack).
 
 There is a on-line demo deployment version at: https://knapsack-api.herokuapp.com
 
@@ -52,7 +52,7 @@ In order to send a request, either GET or POST can be used:
 
 - `GET /api/v1/stress/10000/10` would generate and solve a knapsack problem with 10000 items (each of them with a random weight up to 10).
 
-#### Knapsack problem
+#### Knapsack problem solving
 
 In order to solve a given knapsak problem you should send a POST to `/api/v1/problems` endpoint: 
 
