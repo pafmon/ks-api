@@ -8,12 +8,12 @@ This server was scaffolded with [oas-wizard](https://github.com/pafmon/oas-wizar
 There is a on-line demo deployment version at: https://knapsack-api.herokuapp.com
 
 
-### Docker run
+### Running the API using docker
 
 If you have docker, you can use it out of the box: `docker run -p 12345:80 -d pafmon/ks-api` to run the container at port `12345`
 
 
-### Running the server
+### Running the API using node
 
 To run the server, just use:
 
