@@ -1,4 +1,4 @@
-# OAS generated server
+# KS-API
 
 ## Overview
 This is a Knapsack API for stress analysis and benchmarking
