@@ -3,7 +3,7 @@
 ## Overview
 This is a Knapsack API for stress analysis and benchmarking. 
 
-This server was scaffolded with [oas-wizard](https://github.com/pafmon/oas-wizard), [oas-tools](https://github.com/isa-group/oas-tools) and [oas-generator](https://github.com/isa-group/oas-generator); and based on a Knapsack implementation is taken from: [devfacet](http://github.com/devfacet/knapsack)
+This server was scaffolded with [oas-wizard](https://github.com/pafmon/oas-wizard), [oas-tools](https://github.com/isa-group/oas-tools) and [oas-generator](https://github.com/isa-group/oas-generator); Knapsack algorithm is taken from [devfacet](http://github.com/devfacet/knapsack).
 
 There is a on-line demo deployment version at: https://knapsack-api.herokuapp.com
 
