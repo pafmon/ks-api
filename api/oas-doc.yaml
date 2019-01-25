@@ -94,6 +94,24 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/errorModel'        
+  '/api/v1/stress/info':
+    get:
+      x-router-controller: apiv1stressController
+      description: Returns the performance info about system status
+      operationId: getStressInfo
+      responses:
+        '200':
+          description: stress info
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/stressInfo'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/errorModel'        
 components:
   schemas:
     errorModel:
@@ -284,3 +302,45 @@ components:
         - config
         - info
         - result
+    stressInfo:
+      description: ''
+      type: object
+      properties:
+        cpuUsage:
+          type: number
+        cpuFree:
+          type: number
+        cpuCount:
+          type: number
+        freemem:
+          type: number
+        totalmem:
+          type: number
+        freememPercentage:
+          type: number
+        sysUptime:
+          type: number
+        processUptime:
+          type: number
+        loadavgLast1Minute:
+          type: number
+        loadavgLast5Minutes:
+          type: number
+        loadavgLast15Minutes:
+          type: number
+        platform:
+          type: string
+          minLength: 1
+      required:
+        - cpuUsage
+        - cpuFree
+        - cpuCount
+        - freemem
+        - totalmem
+        - freememPercentage
+        - sysUptime
+        - processUptime
+        - loadavgLast1Minute
+        - loadavgLast5Minutes
+        - loadavgLast15Minutes
+        - platform
