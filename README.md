@@ -1,14 +1,15 @@
 # KS-API
 
 ## Overview
-This is a Knapsack API for stress analysis and benchmarking
+This is a Knapsack API for stress analysis and benchmarking. 
 
 This server was scaffolded with [oas-wizard](https://github.com/pafmon/oas-wizard), [oas-tools](https://github.com/isa-group/oas-tools) and [oas-generator](https://github.com/isa-group/oas-generator)
 
 The Knapsack implementation is taken from: http://github.com/devfacet/knapsack
 
 ### Running the server
-To run the server, run:
+
+To run the server, just use:
 
 ```
 npm start
@@ -82,7 +83,7 @@ In order to solve a given knapsak problem you should send a POST to `/api/v1/pro
     }
 }
 ```
-WIll get: 
+will get: 
 ```json
 {
   "id": "KSProblem",
