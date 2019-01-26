@@ -18,6 +18,7 @@ If you have docker, you can use it out of the box: `docker run -p 12345:80 -d pa
 To run the server, just use:
 
 ```
+npm install 
 npm start
 ```
 
