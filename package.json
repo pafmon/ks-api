@@ -1,6 +1,6 @@
 {
   "name": "ks-api",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Knapsack Problem Solver API for stress analysis and benchmark",
   "keywords": [
     "knapsack",
