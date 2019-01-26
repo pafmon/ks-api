@@ -106,30 +106,21 @@ function ksProblemSolving(capacity, items) {
 module.exports.newProblem = function newProblem(req, res, next) {
   var problemRequest = req.problem.value;
 
-  console.log("New Problem: " + problemRequest.id);
-  console.log("Problem item count: " + problemRequest.problem.items.length);
-
   var ksProblemItems = itemsMarshall(problemRequest.problem.items);
 
 
   var beginHR = process.hrtime()
   var begin = beginHR[0] * 1000000 + beginHR[1] / 1000;
 
-  console.time("KP-Solving");
   var ksSolutionItems = ksProblemSolving(problemRequest.problem.size, ksProblemItems);
-  console.timeEnd("KP-Solving");
 
   var endHR = process.hrtime()
   var end = endHR[0] * 1000000 + endHR[1] / 1000;
 
-  var solutionSolvingTime = (end - begin) / 1000 + "ms";
-  console.log("solvingTime: " + solutionSolvingTime);
+  var solutionSolvingTime = (end - begin) / 1000;
 
   var solutionItems = itemsUnMarshall(ksSolutionItems);
   problemRequest.problem.items = problemRequest.problem.items;
-
-  console.log("Solution item size: " + solutionItems.length);
-
 
   problemRequest.solution = {
     items: solutionItems,
