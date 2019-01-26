@@ -113,8 +113,6 @@ module.exports.newStress = function newStress(req, res, next) {
 
   var stressRequest = req.stressRequest.value;
 
-  console.log("#### NEW stress Request ####");
-
   var heapStats = v8.getHeapStatistics();
 
   // Round stats to MB
@@ -131,7 +129,6 @@ module.exports.newStress = function newStress(req, res, next) {
       "maxTime": -1
     },
     "info": {
-      "maxProcessMemory": -1,
       "initialMemory": Math.round((initialMemUsed) * 1000) / 1000,
       "heapStats": roundedHeapStats
     },
@@ -171,15 +168,9 @@ module.exports.newStress = function newStress(req, res, next) {
   var itemNumber = parametersMap["itemNumber"];
   var maxWeight = parametersMap["maxWeight"];
 
-  console.log("itemNumber: " + itemNumber);
-  console.log("maxWeight: " + maxWeight);
-
-  var problem = "kp";
-
 
   ///////////////// GENERATION ///////////////////
 
-  var phase = "generation";
   var beginHR = process.hrtime()
   var begin = beginHR[0] * 1000000 + beginHR[1] / 1000;
 
@@ -192,14 +183,12 @@ module.exports.newStress = function newStress(req, res, next) {
   var duration = (end - begin) / 1000;
   var roundedDuration = Math.round(duration * 1000) / 1000;
 
-  console.log(problem + "-" + phase + "-D: " + roundedDuration + " ms");
 
   stagesMap["problemGeneration"].duration = roundedDuration;
 
   /////////////////////////////////////////////////
 
   const genMemUsed = process.memoryUsage().heapUsed / 1024 / 1024;
-  console.log(`Generation MEM usage: ${Math.round((genMemUsed-initialMemUsed) * 1000) / 1000} MB`);
 
   stagesMap["problemGeneration"].memory = Math.round((genMemUsed - initialMemUsed) * 1000) / 1000;
 
@@ -215,16 +204,13 @@ module.exports.newStress = function newStress(req, res, next) {
   var duration = (end - begin) / 1000;
   var roundedDuration = Math.round(duration * 1000) / 1000;
 
-  console.log(problem + "-" + phase + "-D: " + roundedDuration + " ms");
   stagesMap["problemSolving"].duration = roundedDuration;
 
   var finalMemUsed = process.memoryUsage().heapUsed / 1024 / 1024;
 
   stagesMap["problemSolving"].memory = Math.round((finalMemUsed - genMemUsed) * 1000) / 1000;
 
-  console.log(`Solving MEM used: ${Math.round((finalMemUsed-genMemUsed) * 1000) / 1000} MB`);
-
-  console.log(`Total MEM usage: ${Math.round((finalMemUsed-initialMemUsed) * 1000) / 1000} MB`);
+  /////////////////////////////////////////////////
 
   var totalEndHR = process.hrtime()
   var totalEnd = totalEndHR[0] * 1000000 + totalEndHR[1] / 1000;
@@ -252,31 +238,46 @@ module.exports.newStress = function newStress(req, res, next) {
 module.exports.getStressInfo = function getStressInfo(req, res, next) {
 
   var os = require('os-utils');
+  var si = require('systeminformation');
 
-  var p = os.platform();
+  si.cpu(function (cpuInfo) {
+    si.mem(function (memInfo) {
 
-  os.cpuUsage(function (cpuUsage) {
+      // Round mem stats to MB
+      var roundedMemInfo = Object.getOwnPropertyNames(memInfo).reduce(function (map, stat) {
+        map[stat] = Math.round((memInfo[stat] / 1024 / 1024) * 1000) / 1000;
+        return map;
+      }, {});
 
-    os.cpuFree(function (cpuFree) {
+      var p = os.platform();
 
-      res.send({
-        "cpuUsage": cpuUsage,
-        "cpuFree": cpuFree,
-        "cpuCount": os.cpuCount(),
-        "freemem": (os.freemem() * 1000) / 1000 ,
-        "totalmem":  (os.totalmem() * 1000) / 1000 ,
-        "freememPercentage": os.freememPercentage(),
-        "sysUptime": os.sysUptime(),
-        "processUptime": os.processUptime(),
-        "loadavgLast1Minute": os.loadavg(1),
-        "loadavgLast5Minutes": os.loadavg(5),
-        "loadavgLast15Minutes": os.loadavg(15),
-        "platform": os.platform()
+      os.cpuUsage(function (cpuUsage) {
+
+        os.cpuFree(function (cpuFree) {
+
+          res.send({
+            "cpuUsage": cpuUsage,
+            "cpuFree": cpuFree,
+            "cpuCount": os.cpuCount(),
+            "memInfo": roundedMemInfo,
+            "freemem": Math.round((os.freemem() * 1000)) / 1000,
+            "totalmem": Math.round((os.totalmem() * 1000)) / 1000,
+            "freememPercentage": os.freememPercentage(),
+            "cpuInfo": cpuInfo,
+            "sysUptime": os.sysUptime(),
+            "processUptime": os.processUptime(),
+            "loadavgLast1Minute": os.loadavg(1),
+            "loadavgLast5Minutes": os.loadavg(5),
+            "loadavgLast15Minutes": os.loadavg(15),
+            "platform": os.platform()
+          });
+
+
+        });
       });
 
 
     });
   });
-
 
 };

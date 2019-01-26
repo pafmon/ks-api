@@ -40,6 +40,7 @@ paths:
         required: true
   /api/v1/stress:
     post:
+      x-router-controller: apiv1stressController
       description: "Stress analysis: It Creates a synthetic problem and solves it returning time and memory used"
       operationId: newStress
       responses:
@@ -256,13 +257,13 @@ components:
         info:
           type: object
           properties:
-            maxProcessMemory:
-              type: number
             initialMemory:
               type: number
+            heapStats:
+              type: object
           required:
-            - maxProcessMemory
             - initialMemory
+            - heapStats
         result:
           type: object
           properties:
@@ -312,6 +313,8 @@ components:
           type: number
         cpuCount:
           type: number
+        cpuInfo:
+          type: object
         freemem:
           type: number
         totalmem:

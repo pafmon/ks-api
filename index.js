@@ -1,8 +1,8 @@
 'use strict';
 
 var fs = require('fs'),
-    http = require('http'),
-    path = require('path');
+  http = require('http'),
+  path = require('path');
 
 var express = require("express");
 var app = express();
@@ -22,7 +22,7 @@ var oasDoc = jsyaml.safeLoad(spec);
 
 var options_object = {
   controllers: path.join(__dirname, './controllers'),
-  loglevel: 'info',
+  loglevel: 'error',
   strict: false,
   router: true,
   validator: true
@@ -30,8 +30,8 @@ var options_object = {
 
 oasTools.configure(options_object);
 
-oasTools.initialize(oasDoc, app, function() {
-  http.createServer(app).listen(serverPort, function() {
+oasTools.initialize(oasDoc, app, function () {
+  http.createServer(app).listen(serverPort, function () {
     console.log("App running at http://localhost:" + serverPort);
     console.log("________________________________________________________________");
     if (options_object.docs !== false) {
@@ -41,6 +41,6 @@ oasTools.initialize(oasDoc, app, function() {
   });
 });
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
   res.redirect('/docs');
 });
