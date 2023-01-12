@@ -10,7 +10,7 @@ There is a **on-line demo** deployment available at: https://knapsack-api.heroku
 
 ### Running the API using docker
 
-If you have docker, you can use it out of the box: `docker run -p 12345:80 -d pafmon/ks-api` to run the container at port `12345`
+If you have docker, you can use it out of the box: `docker run -p 12345:80 -d pafmon/ks-api` to run the container at port `12345`.
 
 
 ### Running the API using node
