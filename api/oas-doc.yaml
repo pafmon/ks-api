@@ -98,7 +98,7 @@ paths:
   '/api/v1/stress/info':
     get:
       x-router-controller: apiv1stressController
-      description: Returns the performance info about system status
+      description: Returns the performance info about system status.
       operationId: getStressInfo
       responses:
         '200':
