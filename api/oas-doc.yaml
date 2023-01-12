@@ -62,7 +62,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/stressRequest'
-        description: Stress request to be executed
+        description: Stress request to be executed.
         required: true
   '/api/v1/stress/{itemNumber}/{maxWeight}':
     get:
