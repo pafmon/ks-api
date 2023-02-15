@@ -1,7 +1,7 @@
 # KS-API
 
 ## Overview
-This is a Knapsack API for stress analysis and benchmarking. 
+This is a Knapsack API for stress analysis and benchmarking.
 
 This server was scaffolded with [oas-wizard](https://github.com/pafmon/oas-wizard), [oas-tools](https://github.com/isa-group/oas-tools) and [oas-generator](https://github.com/isa-group/oas-generator); knapsack algorithm is taken from [devfacet](http://github.com/devfacet/knapsack).
 
@@ -18,7 +18,7 @@ If you have docker, you can use it out of the box: `docker run -p 12345:80 -d pa
 To run the server, just use:
 
 ```
-npm install 
+npm install
 npm start
 ```
 
@@ -30,7 +30,7 @@ Then, if running in localhost, you can check the swagger UI doc portal in: `http
 
 In order to send a request, either GET or POST can be used:
 
-- `POST /api/v1/stress` 
+- `POST /api/v1/stress`
 ```json
 {
 	"problem": "knapsack",
@@ -55,7 +55,7 @@ In order to send a request, either GET or POST can be used:
 
 #### Knapsack problem solving
 
-In order to solve a given knapsak problem you should send a POST to `/api/v1/problems` endpoint: 
+In order to solve a given knapsak problem you should send a POST to `/api/v1/problems` endpoint:
 
 `POST /api/v1/problems`
 ```json
@@ -91,7 +91,7 @@ In order to solve a given knapsak problem you should send a POST to `/api/v1/pro
     }
 }
 ```
-will get: 
+will get:
 ```json
 {
   "id": "KSProblem",
